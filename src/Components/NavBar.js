@@ -17,25 +17,13 @@ export default function Navbar () {
       }, []);
 
       for (let i = 0; i < transactions.length; i++){
-        if (transactions[i].category === "income"){
+        if (transactions[i].category.toLowerCase() === "income"){
             total += Number(transactions[i].amount)
-        } else if (transactions[i].category === "expense") {
+        } else if (transactions[i].category.toLowerCase() === "expense") {
             total -= Number(transactions[i].amount)
         }
       };
 
-
-//     const CashTotal = document.getElementById("BudgetVisual");
-
-//   if (total > 100) {  
-//     CashTotal.setAttribute("style", "color: green;");
-//   } 
-//   else if (total > 0) {
-//     CashTotal.setAttribute("style", "color: yellow;");
-//   } 
-//   else {
-//     CashTotal.setAttribute("style", "color: red;");
-//   }
 
     return(
         <nav className="NavBar">
