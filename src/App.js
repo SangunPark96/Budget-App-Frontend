@@ -5,6 +5,7 @@ import Navbar from './Components/NavBar.js';
 import Home from './Pages/Home';
 import FourOFour from './Pages/FourOFour';
 import Index from './Pages/Index';
+import Show from './Pages/Show';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Routes>
         <Route path="/" element={<Home/>} />
         <Route path="/transactions" element={<Index/>}/>
+        <Route path="/transactions/:index" element={<Show/>}/>
         <Route path="*" element={<FourOFour/>}/>
         </Routes>
         </main>
