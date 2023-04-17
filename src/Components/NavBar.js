@@ -17,9 +17,9 @@ export default function Navbar () {
       }, []);
 
       for (let i = 0; i < transactions.length; i++){
-        if (transactions.category === "expense"){
+        if (transactions[i].category === "income"){
             total += Number(transactions[i].amount)
-        } else {
+        } else if (transactions[i].category === "expense") {
             total -= Number(transactions[i].amount)
         }
       };
@@ -46,7 +46,7 @@ export default function Navbar () {
 
           </h1>
 
-          {total}
+          <h2 style={{color: total > 100 ? "green" : total > 0 ? "yellow" : "red"}}>{total}</h2>
 
           <button className="newButton">
 
