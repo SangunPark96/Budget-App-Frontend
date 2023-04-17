@@ -30,7 +30,7 @@ export default function Navbar () {
 
           <h1 className="LogoText">
             
-            <Link to="/">Budget App</Link>
+            <Link to="/transactions">Budget App</Link>
 
           </h1>
 
