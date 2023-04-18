@@ -12,6 +12,7 @@ export default function BudgetDetails() {
         axios
         .get(`${process.env.REACT_APP_API_URL}/transactions/${index}`)
         .then((res) => {
+          console.log(res)
           setBudget(res.data);
         }).catch((e) => {
           console.log(e);

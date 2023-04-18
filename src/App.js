@@ -9,7 +9,6 @@ import Show from './Pages/Show';
 import New from './Pages/New';
 import Edit from './Pages/Edit';
 
-{/* <Route path="/transactions/:index" element={<Edit/>}/> */}
 
 function App() {
   return (
