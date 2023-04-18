@@ -1,9 +1,11 @@
 import { useState } from "react";
 import axios from "axios";
-import { useNavigate, Link } from "react-router-dom";
+import { useNavigate, Link, useParams } from "react-router-dom";
 const uuid = require('uuid').v1
 
 export default function BudgetNewForm() {
+
+    let { index } = useParams();
 
     const date = new Date();
     let day = date.getDate();
@@ -44,7 +46,7 @@ console.log(transaction)
     axios
     .post(`${process.env.REACT_APP_API_URL}/transactions`, transaction)
     .then(() => {
-      navigate("/transactions")
+      navigate(`/transactions/${index}`)
     })
     .catch((e) => {
       console.log(e)

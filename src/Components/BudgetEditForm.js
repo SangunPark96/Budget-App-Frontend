@@ -18,6 +18,13 @@ export default function BudgetEditForm() {
         type: ""
       });
 
+      useEffect(() => {
+        axios.get(`${process.env.REACT_APP_API_URL}/transactions/${index}`).then((res) => {
+          setTransaction(res.data);
+        }).catch((e) => {
+          console.log(e)
+        })
+      }, [index]);
 
     const handleCategorySelect = (event) => {
         setTransaction({...transaction, category: event.target.value});
@@ -33,13 +40,7 @@ export default function BudgetEditForm() {
       };
     
 
-  useEffect(() => {
-    axios.get(`${process.env.REACT_APP_API_URL}/transactions/${index}`).then((res) => {
-      setTransaction(res.data);
-    }).catch((e) => {
-      console.log(e)
-    })
-  }, [index]);
+ 
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -60,9 +61,8 @@ export default function BudgetEditForm() {
 
                     Type:
 
-               <select id="type-select" value={transaction.type} onChange={handleTypeSelect}>
-                
-               <option value="">--Please choose an option--</option>
+               <select id="type-select" value={transaction.type} onChange={handleTypeSelect}>  
+               <option value="">-Please choose a type-</option>
                <option value="Withdrawal">Withdrawal</option>
                <option value="Deposit">Deposit</option>
                </select>
