@@ -41,7 +41,7 @@ export default function Navbar () {
 
           </h2>
 
-          <h2 style={{color: total > 100 ? "green" : total > 0 ? "yellow" : "red"}}>{total}</h2>
+          <h2 style={{color: total > 100 ? "green" : total > 0 ? "yellow" : "red"}}>Balance: ${total}</h2>
 
           <button className="newButton">
 

@@ -26,7 +26,7 @@ const [transactions, setTransactions] = useState([]);
     return(
         <div className="Index">
           <h2>Transaction Index</h2>
-          <h2 style={{color: total > 100 ? "green" : total > 0 ? "yellow" : "red"}}>{total}</h2>
+          <h2 style={{color: total > 100 ? "green" : total > 0 ? "yellow" : "red"}}>Balance: ${total}</h2>
             <Transactions/>
         </div>
     )
