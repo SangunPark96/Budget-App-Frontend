@@ -5,10 +5,73 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: slategray;
+  background-color: #FFD6C0;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+nav {
+  background: #FFA5A5;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em;
+  box-shadow: 2px 2px 4px #EC368D;
+  margin-bottom: 1em;
+}
+table {
+  width: 50%;
+  margin: auto;
+}
+td {
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+  color: #440381;
+}
+
+h1, h2, h5 {
+  color:#440381
+}
+
+h4 {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+}
+
+tbody td:not(td:first-of-type):hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+
+tbody tr:nth-child(odd) {
+  background: #51E5FF;
+}
+
+button {
+  width: 30%;
+}
+
+input[type],
+textarea {
+  display: block;
+  width: 90%;
+  margin: auto;
+}
+
+
+.NewBackButton {
+  width: 30%;
+}
+
+
+.New form {
+  margin: auto;
+  width: 95%;
 }

@@ -119,7 +119,7 @@ console.log(transaction)
               </form>
               <div>
                 <Link to={`/transactions`}>
-                    <button>Back</button>
+                    <button className="NewBackButton">Back</button>
                 </Link>
             </div>
             </div>
