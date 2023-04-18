@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# Budget Application - SangUn Park - Cohort 9.3 - Pursuit
 
-This project was bootstrapped with [Create React App]
+### This project was bootstrapped with [Create React App]
 (https://github.com/facebook/create-react-app).
 
 This is my project for Cohort 9.3 Days for Pursuit. This is the React
