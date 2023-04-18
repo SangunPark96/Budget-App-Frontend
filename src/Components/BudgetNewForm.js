@@ -1,6 +1,6 @@
 import { useState } from "react";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 const uuid = require('uuid').v1
 
 export default function BudgetNewForm() {
@@ -20,6 +20,7 @@ export default function BudgetNewForm() {
         id: uuid(),
         item_name: "",
         product: "",
+        type: ""
       });
 
 console.log(transaction)
@@ -51,13 +52,15 @@ console.log(transaction)
             <div className="NewForm">
                 <h1>Add A Transaction</h1>
                 <form onSubmit={handleSubmit}>
-                    Category:
-               <select id="category-select" value={transaction.category} onChange={handleSelect}>
+
+                    Type:
+
+               <select id="type-select" value={transaction.type} onChange={handleSelect}>
                <option value="">--Please choose an option--</option>
-               <option value="Expense">Expense</option>
-               <option value="Income">Income</option>
+               <option value="Withdrawal">Withdrawal</option>
+               <option value="Deposit">Deposit</option>
                </select>
-             
+               <br/>
                 <label htmlFor="product">Product:
                 <input
                   id="product"
@@ -67,6 +70,7 @@ console.log(transaction)
                   onChange={handleTextChange}
                 />
                 </label>
+                <br/>
                 <label htmlFor="amount">Amount:
                 <input
                   id="amount"
@@ -76,7 +80,16 @@ console.log(transaction)
                   onChange={handleTextChange}
                 />
                 </label>
-                
+                <br/>               
+                Category:
+
+                <select id="category-select" value={transaction.category} onChange={handleSelect}>
+                <option value="">--Please choose an option--</option>
+                <option value="Important">Important</option>
+                <option value="Dumb">Dumb</option>
+                <option value="Business">Business</option>
+                </select>
+<br/>
                 <label htmlFor="from">From:
                 <input
                   id="from"
@@ -86,7 +99,7 @@ console.log(transaction)
                   placeholder="Where is this transaction from?"
                 />
                 </label>
-
+                <br/>
                 <label htmlFor="item_name">Item Name:
                 <input
                   id="item_name"
@@ -96,9 +109,14 @@ console.log(transaction)
                   placeholder="Name of the item?"
                 />   
                 </label>
-
+                <br/>
                 <input type="submit" />
               </form>
+              <div>
+                <Link to={`/transactions`}>
+                    <button>Back</button>
+                </Link>
+            </div>
             </div>
           );
 };

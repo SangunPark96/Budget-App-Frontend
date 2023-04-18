@@ -15,6 +15,7 @@ export default function BudgetEditForm() {
         id: "",
         item_name: "",
         product: "",
+        type: ""
       });
 
 
@@ -55,10 +56,10 @@ export default function BudgetEditForm() {
 
                     Category:
 
-               <select id="category-select" value={transaction.category} onChange={handleSelect}>
+               <select id="typw-select" value={transaction.type} onChange={handleSelect}>
                <option value="">--Please choose an option--</option>
-               <option value="Expense">Expense</option>
-               <option value="Income">Income</option>
+               <option value="Withdrawal">Withdrawal</option>
+               <option value="Deposit">Deposit</option>
                </select>
              
                 <label htmlFor="product">Product:
@@ -69,6 +70,16 @@ export default function BudgetEditForm() {
                   onChange={handleTextChange}
                 />
                 </label>
+
+                Category:
+
+                <select id="category-select" value={transaction.category} onChange={handleSelect}>
+                <option value="">--Please choose an option--</option>
+                <option value="Important">Important</option>
+                <option value="Dumb">Dumb</option>
+                <option value="Business">Business</option>
+                </select>
+<br/>
 
                 <label htmlFor="amount">Amount:
                 <input

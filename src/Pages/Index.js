@@ -15,9 +15,9 @@ const [transactions, setTransactions] = useState([]);
       }, []);
 
       for (let i = 0; i < transactions.length; i++){
-        if (transactions[i].category.toLowerCase() === "income"){
+        if (transactions[i].type.toLowerCase() === "deposit"){
             total += Number(transactions[i].amount)
-        } else if (transactions[i].category.toLowerCase() === "expense") {
+        } else if (transactions[i].type.toLowerCase() === "withdrawal") {
             total -= Number(transactions[i].amount)
         }
       };

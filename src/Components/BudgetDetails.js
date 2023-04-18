@@ -38,6 +38,7 @@ export default function BudgetDetails() {
         <h5>{budget.product} from {budget.from}</h5>
         <h5>Amount: ${budget.amount}</h5>
         <h5>Category: {budget.category}</h5>
+        <h5>Type: {budget.type}</h5>
         </div>
         <div>
           <Link to={`/transactions`}>

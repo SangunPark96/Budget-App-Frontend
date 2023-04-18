@@ -18,9 +18,9 @@ export default function Navbar () {
       }, [navigate]);
 
       for (let i = 0; i < transactions.length; i++){
-        if (transactions[i].category.toLowerCase() === "income"){
+        if (transactions[i].type.toLowerCase() === "deposit"){
             total += Number(transactions[i].amount)
-        } else if (transactions[i].category.toLowerCase() === "expense") {
+        } else if (transactions[i].type.toLowerCase() === "withdrawal") {
             total -= Number(transactions[i].amount)
         }
       };
@@ -31,9 +31,15 @@ export default function Navbar () {
 
           <h1 className="LogoText">
             
-            <Link to="/transactions">Budget App</Link>
+          <Link to="/">Home</Link>
 
           </h1>
+
+          <h2>
+
+          <Link to="/transactions">Transaction List</Link>
+
+          </h2>
 
           <h2 style={{color: total > 100 ? "green" : total > 0 ? "yellow" : "red"}}>{total}</h2>
 
