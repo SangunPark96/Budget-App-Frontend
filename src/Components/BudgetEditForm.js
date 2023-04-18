@@ -19,8 +19,12 @@ export default function BudgetEditForm() {
       });
 
 
-      const handleSelect = (event) => {
+    const handleCategorySelect = (event) => {
         setTransaction({...transaction, category: event.target.value});
+      };
+    
+    const handleTypeSelect = (event) => {
+        setTransaction({...transaction, type: event.target.value});
       };
     
 
@@ -54,9 +58,10 @@ export default function BudgetEditForm() {
                 <h1>Add A Transaction</h1>
                 <form onSubmit={handleSubmit}>
 
-                    Category:
+                    Type:
 
-               <select id="typw-select" value={transaction.type} onChange={handleSelect}>
+               <select id="type-select" value={transaction.type} onChange={handleTypeSelect}>
+                
                <option value="">--Please choose an option--</option>
                <option value="Withdrawal">Withdrawal</option>
                <option value="Deposit">Deposit</option>
@@ -73,7 +78,7 @@ export default function BudgetEditForm() {
 
                 Category:
 
-                <select id="category-select" value={transaction.category} onChange={handleSelect}>
+                <select id="category-select" value={transaction.category} onChange={handleCategorySelect}>
                 <option value="">--Please choose an option--</option>
                 <option value="Important">Important</option>
                 <option value="Dumb">Dumb</option>

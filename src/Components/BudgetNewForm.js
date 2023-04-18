@@ -31,10 +31,13 @@ console.log(transaction)
     setTransaction({ ...transaction, [event.target.id]: event.target.value });
   };
 
-  const handleSelect = (event) => {
+  const handleCategorySelect = (event) => {
     setTransaction({...transaction, category: event.target.value});
   };
 
+  const handleTypeSelect = (event) => {
+    setTransaction({...transaction, type: event.target.value});
+  };
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -55,7 +58,7 @@ console.log(transaction)
 
                     Type:
 
-               <select id="type-select" value={transaction.type} onChange={handleSelect}>
+               <select id="type-select" value={transaction.type} onChange={handleTypeSelect}>
                <option value="">--Please choose an option--</option>
                <option value="Withdrawal">Withdrawal</option>
                <option value="Deposit">Deposit</option>
@@ -83,7 +86,7 @@ console.log(transaction)
                 <br/>               
                 Category:
 
-                <select id="category-select" value={transaction.category} onChange={handleSelect}>
+                <select id="category-select" value={transaction.category} onChange={handleCategorySelect}>
                 <option value="">--Please choose an option--</option>
                 <option value="Important">Important</option>
                 <option value="Dumb">Dumb</option>
