@@ -1,20 +1,21 @@
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import { useState, useEffect } from "react";
 import axios from "axios";
 
 export default function Navbar () {
 
     const [transactions, setTransactions] = useState([]);
+    const navigate = useNavigate()
     let total = 0; 
 
     useEffect(() => {
         axios.get(`${process.env.REACT_APP_API_URL}/transactions`).then((res) => {
           setTransactions(res.data);
           console.log(res.data)
-        }).catch((e) => {
-          console.log(e)
+        }).catch(() => {
+          navigate("/not-found")
         })
-      }, []);
+      }, [navigate]);
 
       for (let i = 0; i < transactions.length; i++){
         if (transactions[i].category.toLowerCase() === "income"){

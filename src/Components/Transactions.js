@@ -16,11 +16,13 @@ export default function Transactions() {
 
     return(
         <div className="TransactionIndex">
-            <section>
+            <table>
+                <tbody>
                 {budgetList.map((budget, index) => {
                     return <Transaction key={index} budget={budget} index={index}/>;
                 })}
-            </section>
+                </tbody>
+            </table>
         </div>
     )
 }

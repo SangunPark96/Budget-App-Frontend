@@ -3,11 +3,7 @@ import { Link } from "react-router-dom"
 export default function Transaction({ budget, index}) {
 
 
-    // <h3>{budget.category}</h3>
-    //     <p>{budget.id}</p>
-    //     <p> {budget.from} </p>
-    //     <p>{budget.date}</p> 
-    //     <h2>${budget.amount}</h2>
+
     return(
         <tr className="Transaction Log">
        <td>{budget.category.toLowerCase() === "expense" ? (
