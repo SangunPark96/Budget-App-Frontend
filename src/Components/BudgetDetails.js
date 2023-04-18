@@ -13,11 +13,11 @@ export default function BudgetDetails() {
         .get(`${process.env.REACT_APP_API_URL}/transactions/${index}`)
         .then((res) => {
           setBudget(res.data);
-          console.log(budget);
-        }).catch(() => {
+        }).catch((e) => {
+          console.log(e);
           navigate("/not-found")
         });
-      }, []);
+      }, [index, navigate]);
 
       const handleDelete = () => {
         axios
@@ -33,13 +33,13 @@ export default function BudgetDetails() {
         <>
         <div className="BudgetDetails">
         <h1>{budget.item_name}</h1>
-        <h5>{budget.id} from {budget.from}</h5>
+        <h2>ID: {budget.id}</h2>
+        <h5>{budget.product} from {budget.from}</h5>
         <h5>Amount: ${budget.amount}</h5>
         <h5>Category: {budget.category}</h5>
-        <h5>Days since last crisis: {budget.daysSinceLastCrisis}</h5>
         </div>
         <div>
-          <Link to={`/budgets`}>
+          <Link to={`/transactions`}>
             <button>Back</button>
           </Link>
         </div>
