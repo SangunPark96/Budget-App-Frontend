@@ -7,8 +7,8 @@ import FourOFour from './Pages/FourOFour';
 import Index from './Pages/Index';
 import Show from './Pages/Show';
 import New from './Pages/New';
+import Edit from './Pages/Edit';
 
-// import Edit from './Pages/Edit';
 {/* <Route path="/transactions/:index" element={<Edit/>}/> */}
 
 function App() {
@@ -22,6 +22,7 @@ function App() {
         <Route path="/transactions" element={<Index/>}/>
         <Route path="/transactions/:index" element={<Show/>}/>
         <Route path="/transactions/new" element={<New/>}/> 
+        <Route path="/transactions/:index/edit" element={<Edit/>}/>
         <Route path="*" element={<FourOFour/>}/>
         </Routes>
         </main>
