@@ -74,7 +74,7 @@ console.log(transaction)
                 <label htmlFor="amount">Amount:
                 <input
                   id="amount"
-                  type="text"
+                  type="number"
                   value={transaction.amount}
                   placeholder="Total Dollar Amount"
                   onChange={handleTextChange}

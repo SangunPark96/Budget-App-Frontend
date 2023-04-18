@@ -113,7 +113,7 @@ export default function BudgetEditForm() {
                   id="date"
                   value={transaction.date}
                   onChange={handleTextChange}
-                  type="text"
+                  type="date"
                 />   
                 </label>
 
