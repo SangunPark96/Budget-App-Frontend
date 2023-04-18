@@ -16,3 +16,7 @@ To access this application locally, clone and you will need to npm install to
 have access to all needed dependencies like react, react-router-dom, axios, Uuidv1.
 Create a .env file and place   "REACT_APP_API_URL=http://localhost:3003"
 within the file and you should be good to go.
+
+The repository for the express backend is:
+
+## https://github.com/SangunPark96/Budget-App-Backend
