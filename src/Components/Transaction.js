@@ -6,7 +6,7 @@ export default function Transaction({ budget, index}) {
 
     return(
         <tr className="Transaction Log">
-       <td>{budget.category.toLowerCase() === "expense" ? (
+       <td>{budget.type.toLowerCase() === "withdrawal" ? (
             <span> ❌ </span>
           ) : (
             <span> 💰 </span>

@@ -5,7 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #FFD6C0;
+  background-color: #D4ADCF;
 }
 
 code {
@@ -13,7 +13,7 @@ code {
     monospace;
 }
 nav {
-  background: #FFA5A5;
+  background: #DDE1E4;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -31,11 +31,11 @@ td {
 
 a {
   text-decoration: none;
-  color: #440381;
+  color: #856084;
 }
 
 h1, h2, h5 {
-  color:#440381
+  color:#856084
 }
 
 h4 {
@@ -51,7 +51,7 @@ tbody td:not(td:first-of-type):hover {
 
 
 tbody tr:nth-child(odd) {
-  background: #51E5FF;
+  background: #C1CAD6;
 }
 
 button {
