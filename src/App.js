@@ -6,6 +6,10 @@ import Home from './Pages/Home';
 import FourOFour from './Pages/FourOFour';
 import Index from './Pages/Index';
 import Show from './Pages/Show';
+import New from './Pages/New';
+
+// import Edit from './Pages/Edit';
+{/* <Route path="/transactions/:index" element={<Edit/>}/> */}
 
 function App() {
   return (
@@ -17,6 +21,7 @@ function App() {
         <Route path="/" element={<Home/>} />
         <Route path="/transactions" element={<Index/>}/>
         <Route path="/transactions/:index" element={<Show/>}/>
+        <Route path="/transactions/new" element={<New/>}/> 
         <Route path="*" element={<FourOFour/>}/>
         </Routes>
         </main>
