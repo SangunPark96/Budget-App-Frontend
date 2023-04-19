@@ -66,6 +66,7 @@ console.log(transaction)
                <option value="Deposit">Deposit</option>
                </select>
                <br/>
+               <br/>
                 <label htmlFor="product">Product:
                 <input
                   id="product"
@@ -94,6 +95,7 @@ console.log(transaction)
                 <option value="Dumb">Dumb</option>
                 <option value="Business">Business</option>
                 </select>
+<br/>
 <br/>
                 <label htmlFor="from">From:
                 <input

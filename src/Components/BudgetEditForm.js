@@ -58,7 +58,7 @@ export default function BudgetEditForm() {
         <div className="NewForm">
                 <h1>Add A Transaction</h1>
                 <form onSubmit={handleSubmit}>
-
+<br/>
                     Type:
 
                <select id="type-select" value={transaction.type} onChange={handleTypeSelect}>  
@@ -66,7 +66,8 @@ export default function BudgetEditForm() {
                <option value="Withdrawal">Withdrawal</option>
                <option value="Deposit">Deposit</option>
                </select>
-             
+             <br/>
+             <br/>
                 <label htmlFor="product">Product:
                 <input
                   id="product"
@@ -75,9 +76,9 @@ export default function BudgetEditForm() {
                   onChange={handleTextChange}
                 />
                 </label>
-
+<br/>
                 Category:
-
+<br/>
                 <select id="category-select" value={transaction.category} onChange={handleCategorySelect}>
                 <option value="">--Please choose an option--</option>
                 <option value="Important">Important</option>
@@ -85,7 +86,7 @@ export default function BudgetEditForm() {
                 <option value="Business">Business</option>
                 </select>
 <br/>
-
+<br/>
                 <label htmlFor="amount">Amount:
                 <input
                   id="amount"
@@ -94,7 +95,7 @@ export default function BudgetEditForm() {
                   onChange={handleTextChange}
                 />
                 </label>
-                
+                <br/>
                 <label htmlFor="from">From:
                 <input
                   id="from"
@@ -103,7 +104,7 @@ export default function BudgetEditForm() {
                   type="text"
                 />
                 </label>
-
+<br/>
                 <label htmlFor="item_name">Item Name:
                 <input
                   id="item_name"
@@ -112,16 +113,17 @@ export default function BudgetEditForm() {
                   type="text"
                 />   
                 </label>
-
+                <br/>
                 <label htmlFor="date">Date:
                 <input
                   id="date"
                   value={transaction.date}
-                  type="date"
                 />   
                 </label>
-
+                <br/>
+                <br/>
                 <label htmlFor="id">ID:
+                
                 <input
                   id="id"
                   value={transaction.id}
@@ -129,17 +131,17 @@ export default function BudgetEditForm() {
                 />   
                 </label>
 
-                <input type="submit" />
+                <input type="submit"/>
 
               </form>
 
-              <Link to={`/transactions/${index}`}>
-                <button>Nevermind!</button>
-              </Link>
+                <Link to={`/transactions/${index}`}>
+                  <button> Nevermind! </button>
+                </Link>
 
             <div>
                 <Link to={`/transactions`}>
-                    <button>Back</button>
+                  <button>Back</button>
                 </Link>
             </div>
         </div>
