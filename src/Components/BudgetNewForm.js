@@ -54,6 +54,7 @@ console.log(transaction)
   };
 
         return(
+
             <div className="NewForm">
                 <h1>Add A Transaction</h1>
                 <form onSubmit={handleSubmit}>
@@ -120,10 +121,12 @@ console.log(transaction)
                 <input type="submit" />
               </form>
               <div>
+
                 <Link to={`/transactions`}>
                     <button className="NewBackButton">Back</button>
                 </Link>
+
             </div>
-            </div>
-          );
+          </div>
+        );
 };
