@@ -5,16 +5,15 @@ const uuid = require('uuid').v1
 
 export default function BudgetNewForm() {
 
-    let { index } = useParams();
+  let { index } = useParams();
 
-    const date = new Date();
-    let day = date.getDate();
-    let month = date.getMonth() + 1;
-    let year = date.getFullYear();
-    let currentDate = `${year}-${month}-${day}`;
+  const date = new Date();
+  let day = date.getDate();
+  let month = date.getMonth() + 1;
+  let year = date.getFullYear();
+  let currentDate = `${year}-${month}-${day}`;
 
-
-    const [transaction, setTransaction] = useState({
+  const [transaction, setTransaction] = useState({
         amount: "",
         category: "",
         date: currentDate,
@@ -25,7 +24,7 @@ export default function BudgetNewForm() {
         type: ""
       });
 
-console.log(transaction)
+  console.log(transaction)
 
   const navigate = useNavigate();
 
@@ -56,18 +55,20 @@ console.log(transaction)
         return(
 
             <div className="NewForm">
-                <h1>Add A Transaction</h1>
-                <form onSubmit={handleSubmit}>
+              <h1>Add A Transaction</h1>
+              <form onSubmit={handleSubmit}>
 
                     Type:
 
-               <select id="type-select" value={transaction.type} onChange={handleTypeSelect}>
-               <option value="">--Please choose an option--</option>
-               <option value="Withdrawal">Withdrawal</option>
-               <option value="Deposit">Deposit</option>
-               </select>
+                <select id="type-select" value={transaction.type} onChange={handleTypeSelect}>
+                <option value="">--Please choose an option--</option>
+                <option value="Withdrawal">Withdrawal</option>
+                <option value="Deposit">Deposit</option>
+                </select>
+
                <br/>
                <br/>
+
                 <label htmlFor="product">Product:
                 <input
                   id="product"
@@ -78,6 +79,7 @@ console.log(transaction)
                 />
                 </label>
                 <br/>
+
                 <label htmlFor="amount">Amount:
                 <input
                   id="amount"
@@ -87,7 +89,8 @@ console.log(transaction)
                   onChange={handleTextChange}
                 />
                 </label>
-                <br/>               
+                <br/>        
+
                 Category:
 
                 <select id="category-select" value={transaction.category} onChange={handleCategorySelect}>
@@ -96,8 +99,10 @@ console.log(transaction)
                 <option value="Dumb">Dumb</option>
                 <option value="Business">Business</option>
                 </select>
-<br/>
-<br/>
+
+                <br/>
+                <br/>
+
                 <label htmlFor="from">From:
                 <input
                   id="from"
@@ -108,6 +113,7 @@ console.log(transaction)
                 />
                 </label>
                 <br/>
+
                 <label htmlFor="item_name">Item Name:
                 <input
                   id="item_name"
@@ -118,15 +124,21 @@ console.log(transaction)
                 />   
                 </label>
                 <br/>
+
                 <input type="submit" />
+                
               </form>
+
               <div>
 
                 <Link to={`/transactions`}>
+
                     <button className="NewBackButton">Back</button>
+
                 </Link>
 
             </div>
+
           </div>
         );
 };
