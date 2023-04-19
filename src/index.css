@@ -27,6 +27,7 @@ table {
 }
 td {
   text-align: center;
+  color:black;
 }
 
 a {
@@ -34,7 +35,7 @@ a {
   color: #856084;
 }
 
-h1, h2, h5 {
+h1, h2, h5, h3 {
   color:#856084
 }
 
@@ -74,4 +75,12 @@ textarea {
 .New form {
   margin: auto;
   width: 95%;
+}
+
+.minus-sign {
+  color: red;
+}
+
+.plus-sign {
+  color: rgb(7, 196, 7);
 }

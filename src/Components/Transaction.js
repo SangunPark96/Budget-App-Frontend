@@ -16,9 +16,9 @@ export default function Transaction({ budget, index}) {
        <td>{budget.date}</td>
         <td><Link to={`/transactions/${index}`}>{budget.item_name}</Link></td>
 <td>{budget.type.toLowerCase() === "withdrawal" ? (
-            <span> - </span>
+            <span className="minus-sign"> - </span>
           ) : (
-            <span> + </span>
+            <span className="plus-sign"> + </span>
           )}${budget.amount}</td>
         
       </tr>

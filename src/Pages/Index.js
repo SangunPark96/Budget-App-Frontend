@@ -3,8 +3,9 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 
 export default function Index(){
-let total = 0
-const [transactions, setTransactions] = useState([]);
+
+  let total = 0
+  const [transactions, setTransactions] = useState([]);
 
     useEffect(() => {
         axios.get(`${process.env.REACT_APP_API_URL}/transactions`).then((res) => {
